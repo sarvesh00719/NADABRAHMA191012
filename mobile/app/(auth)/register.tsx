@@ -23,8 +23,8 @@ export default function Register() {
     <View style={styles.container}>
       <Text style={styles.title}>{t("Create Account")}</Text>
       <TextInput style={styles.input} placeholder="Name" value={name} onChangeText={setName} />
-      <TextInput style={styles.input} placeholder={t("Email")} value={email} onChangeText={setEmail} autoCapitalize="none" />
-      <TextInput style={styles.input} placeholder={t("Password")} value={password} onChangeText={setPassword} secureTextEntry />
+      <TextInput style={styles.input} placeholder={t("Email")} placeholderTextColor={colors.textSecondary} value={email} onChangeText={setEmail} autoCapitalize="none" />
+      <TextInput style={styles.input} placeholder={t("Password")} placeholderTextColor={colors.textSecondary} value={password} onChangeText={setPassword} secureTextEntry />
       <TouchableOpacity style={styles.button} onPress={handleRegister}>
         <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
@@ -35,7 +35,7 @@ export default function Register() {
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", padding: 20, backgroundColor: colors.background },
   title: { fontSize: 28, fontWeight: "bold", color: colors.text, marginBottom: 30, textAlign: "center" },
-  input: { backgroundColor: colors.surface, padding: 15, borderRadius: 8, marginBottom: 15, borderWidth: 1, borderColor: colors.border },
+  input: { backgroundColor: colors.surface, padding: 15, borderRadius: 8, marginBottom: 15, borderWidth: 1, borderColor: colors.border, color: colors.text },
   button: { backgroundColor: colors.primary, padding: 15, borderRadius: 8, alignItems: "center" },
   buttonText: { color: colors.surface, fontWeight: "bold", fontSize: 16 }
 });
