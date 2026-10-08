@@ -52,7 +52,7 @@ class GeminiEngine:
                 context_override = "CRITICAL CONTEXT: You are an academic guide and meditation instructor. You MUST strictly limit this conversation to academics, studying, concentration, and pre-study meditation (like Omkar and focusing on the Sahasrara chakra)."
             
             if context_override:
-                rules = context_override
+                rules = rules + "`n`n" + context_override
 
             system_instruction = f"{rules}\n\n{hint}\n{checkin_info}\n\n{memory_info}\n\nLanguage: {ctx.language}"
 
@@ -65,7 +65,7 @@ class GeminiEngine:
             config = {
                 "system_instruction": system_instruction,
                 "temperature": 0.6,
-                "max_output_tokens": 200,
+                "max_output_tokens": 800,
             }
             
             import asyncio
@@ -100,6 +100,7 @@ class GeminiEngine:
             )
         except Exception as e:
             print(f"GEMINI ERROR: {str(e)}"); raise EngineUnavailable(f"Gemini generation failed: {str(e)}")
+
 
 
 
