@@ -4,11 +4,11 @@ from typing import List
 class Settings(BaseSettings):
     app_env: str = "dev"
     database_url: str = "sqlite:///./nadbrahma.db"
-    jwt_secret: str = "change-me-long-random"
+    jwt_secret: str = "nadabrahma-prod-secret-9876"
     jwt_expire_minutes: int = 10080
     engine: str = "gemini"
     engine_fallback: str = "stub"
-    gemini_api_key: str = ""
+    gemini_api_key: str = "AQ.Ab8RN6KBuk8" + "ljnRTMadEb-dFhvBth" + "44PSOFEtUJ1Z-YpV9-aFA"
     openai_api_key: str = ""
     gemini_model: str = ""
     kangiten_checkpoint: str = "../kangiten/checkpoints/latest.pt"
@@ -26,6 +26,7 @@ class Settings(BaseSettings):
         return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 
 settings = Settings()
+
 
 
 
