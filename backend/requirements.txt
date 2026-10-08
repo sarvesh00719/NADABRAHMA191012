@@ -11,3 +11,5 @@ httpx
 pytest
 python-multipart
 email-validator
+matplotlib
+fpdf2
