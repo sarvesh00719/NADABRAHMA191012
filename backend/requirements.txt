@@ -13,3 +13,4 @@ python-multipart
 email-validator
 matplotlib
 fpdf2
+openai
