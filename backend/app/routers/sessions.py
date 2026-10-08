@@ -45,7 +45,7 @@ async def proxy_tts(text: str, voiceId: str, apiKey: str):
         
         res = requests.post(url, headers=headers, json=data)
         if res.status_code == 200:
-            return Response(content=res.content, media_type="audio/mpeg")
+            return Response(content=res.content, media_type="audio/wav")
         else:
             return Response(status_code=res.status_code, content=res.text)
     except Exception as e:
@@ -468,9 +468,9 @@ async def get_omkar():
     from fastapi.responses import FileResponse
     import os
     
-    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "omkar.mp3")
+    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "omkar.wav")
     if os.path.exists(file_path):
-        return FileResponse(file_path, media_type="audio/mpeg")
+        return FileResponse(file_path, media_type="audio/wav")
     return Response(status_code=404, content="Omkar file not found")
 
 @router.get("/espresso/40hz")
@@ -478,7 +478,7 @@ async def get_espresso():
     from fastapi.responses import FileResponse
     import os
     
-    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "espresso.mp3")
+    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "espresso.wav")
     if os.path.exists(file_path):
-        return FileResponse(file_path, media_type="audio/mpeg")
+        return FileResponse(file_path, media_type="audio/wav")
     return Response(status_code=404, content="Espresso audio not found")
