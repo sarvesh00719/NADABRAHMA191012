@@ -5,7 +5,7 @@ from app.services.engines.base import EngineContext, EngineReply, ConversationEn
 
 class GeminiEngine:
     name: str = "gemini"
-    version: str = settings.gemini_model or "gemini-3.8-flash"
+    version: str = settings.gemini_model or "gemini-3.5-flash-lite"
     
     def __init__(self):
         self.api_key = settings.gemini_api_key
@@ -100,6 +100,7 @@ class GeminiEngine:
             )
         except Exception as e:
             print(f"GEMINI ERROR: {str(e)}"); raise EngineUnavailable(f"Gemini generation failed: {str(e)}")
+
 
 
 

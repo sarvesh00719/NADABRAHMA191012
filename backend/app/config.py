@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     engine_fallback: str = "stub"
     gemini_api_key: str = "AQ.Ab8RN6KBuk8" + "ljnRTMadEb-dFhvBth" + "44PSOFEtUJ1Z-YpV9-aFA"
     openai_api_key: str = ""
-    gemini_model: str = "gemini-3.8-flash"
+    gemini_model: str = "gemini-3.5-flash-lite"
     kangiten_checkpoint: str = "../kangiten/checkpoints/latest.pt"
     kangiten_tokenizer: str = "../kangiten/tokenizer/tok.model"
     raga_mode: str = "link"
@@ -26,6 +26,7 @@ class Settings(BaseSettings):
         return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 
 settings = Settings()
+
 
 
 
