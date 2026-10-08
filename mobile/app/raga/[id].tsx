@@ -13,7 +13,7 @@ export default function RagaWebView() {
   
   // The localtunnel URL for the Gradio app
   const ipMatch = (process.env.EXPO_PUBLIC_API_URL || "").match(/http:\/\/(.*?):/);
-  const ip = ipMatch ? ipMatch[1] : "10.85.34.148";
+  const ip = ipMatch ? ipMatch[1] : "192.168.1.6";
   const gradioUrl = `http://${ip}:7860/?session_id=${id}`;
 
   return (
