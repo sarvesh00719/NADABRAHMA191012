@@ -483,3 +483,19 @@ async def get_espresso():
         return FileResponse(file_path, media_type="audio/mpeg")
     return Response(status_code=404, content="Espresso audio not found")
 
+
+
+@router.get('/public/summary/{session_id}')
+def get_public_summary(session_id: str, db: Session = Depends(get_db)):
+    # Public endpoint exclusively for Gradio integration
+    from app.models import SessionReview, Message
+    review = db.query(SessionReview).filter(SessionReview.session_id == session_id).first()
+    if review and review.draft_summary:
+        return {"summary": review.draft_summary}
+        
+    msgs = db.query(Message).filter(Message.session_id == session_id, Message.role == 'user').order_by(Message.created_at.desc()).limit(3).all()
+    if msgs:
+        return {"summary": "
+".join([m.content for m in reversed(msgs)])}
+        
+    return {"summary": ""}
