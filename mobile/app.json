@@ -16,7 +16,8 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.sarvaa"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -27,6 +28,12 @@
       "expo-secure-store",
       "expo-sharing"
     ],
-    "scheme": "nadabrahma"
+    "scheme": "nadabrahma",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cf05676a-e62c-483b-8cf0-214a4d874b30"
+      }
+    }
   }
 }
