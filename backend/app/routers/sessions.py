@@ -495,7 +495,7 @@ def get_public_summary(session_id: str, db: Session = Depends(get_db)):
         
     msgs = db.query(Message).filter(Message.session_id == session_id, Message.role == 'user').order_by(Message.created_at.desc()).limit(3).all()
     if msgs:
-        return {"summary": "
-".join([m.content for m in reversed(msgs)])}
+        return {"summary": "\n".join([m.content for m in reversed(msgs)])}
         
     return {"summary": ""}
+
