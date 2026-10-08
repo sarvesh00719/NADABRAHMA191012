@@ -13,7 +13,8 @@
                                   "env":  {
                                               "NPM_CONFIG_LEGACY_PEER_DEPS":  "true",
                                               "EXPO_PUBLIC_ELEVENLABS_API_KEY":  "sk_c3e2cf81649e2c281bf59ae4ea4db19e0ed0dbfc07bbf80a",
-                                              "EXPO_PUBLIC_ELEVENLABS_VOICE_ID":  "EXAVITQu4vr4xnSDxMaL"
+                                              "EXPO_PUBLIC_ELEVENLABS_VOICE_ID":  "EXAVITQu4vr4xnSDxMaL",
+                                              "EXPO_PUBLIC_API_URL":  "https://nadabrahma191012.onrender.com/api/v1"
                                           }
                               },
                   "production":  {
