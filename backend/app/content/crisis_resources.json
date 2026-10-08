@@ -1,0 +1,8 @@
+{
+  "message_key": "crisis.message",
+  "resources": [
+    {"name": "Emergency services (India)", "contact": "112", "type": "phone"},
+    {"name": "Tele-MANAS (India mental health helpline)", "contact": "14416", "type": "phone"}
+  ],
+  "note": "VERIFY every number and add a trusted contact option before sharing with real users."
+}

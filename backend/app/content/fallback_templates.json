@@ -1,0 +1,8 @@
+{
+  "listen": ["Thank you for sharing that. What's on your mind right now?", "I'm here and listening. What would you like to talk about?"],
+  "reflect": ["It sounds like this has been weighing on you. Is that close to how it feels?", "I hear that this matters to you. Did I understand that right?"],
+  "explore": ["What part of this feels most important to you right now?", "When did you first notice this feeling today?"],
+  "suggest_activity": ["If it feels useful, we could try a short breathing exercise together. Would you like that?"],
+  "wrap_up": ["Thank you for talking with me today. When you're ready, you can end the session and review a summary."],
+  "error": ["I'm having trouble replying right now. You can try again, or use a breathing activity while you wait."]
+}

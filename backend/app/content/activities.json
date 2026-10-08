@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "key": "breathing",
+      "title_key": "activity.breathing",
+      "duration_sec": 180,
+      "steps": [
+        {"text_key": "activity.breathing.inhale", "seconds": 4},
+        {"text_key": "activity.breathing.hold", "seconds": 4},
+        {"text_key": "activity.breathing.exhale", "seconds": 6}
+      ]
+    },
+    {
+      "key": "grounding",
+      "title_key": "activity.grounding",
+      "duration_sec": 300,
+      "steps": [
+        {"text_key": "activity.grounding.five", "seconds": 60},
+        {"text_key": "activity.grounding.four", "seconds": 60},
+        {"text_key": "activity.grounding.three", "seconds": 60},
+        {"text_key": "activity.grounding.two", "seconds": 60},
+        {"text_key": "activity.grounding.one", "seconds": 60}
+      ]
+    },
+    {
+      "key": "winddown",
+      "title_key": "activity.winddown",
+      "duration_sec": 600,
+      "steps": [
+        {"text_key": "activity.winddown.relax", "seconds": 300},
+        {"text_key": "activity.winddown.reflect", "seconds": 300}
+      ]
+    }
+  ]
+}
