@@ -95,7 +95,7 @@ Keep it very natural, short, and welcoming. Do not sound robotic."""
             from google import genai
             client = genai.Client()
             response = client.models.generate_content(
-                model='gemini-3.5-flash-lite',
+                model=settings.gemini_model,
                 contents=system_prompt,
             )
             opening_text = response.text.strip()
@@ -303,7 +303,7 @@ Additionally, output a JSON array of keyword themes at the very bottom wrapped i
 ["anxiety", "fear", "childhood"]
 `'''
         res = await client.aio.models.generate_content(
-            model=settings.gemini_model or "gemini-1.5-flash",
+            model=settings.gemini_model or settings.gemini_model,
             contents=prompt,
         )
         draft_text = res.text
@@ -446,7 +446,7 @@ async def transcribe_audio(payload: AudioUpload, user: User = Depends(get_curren
         
         # Audio input for Gemini 1.5 Flash
         response = client.models.generate_content(
-            model='gemini-3.5-flash-lite',
+            model=settings.gemini_model,
             contents=[
                 types.Part.from_bytes(data=audio_bytes, mime_type='audio/m4a'),
                 "Please transcribe this audio exactly as spoken. Return ONLY the transcribed text, nothing else. If you cannot hear anything, return an empty string."
@@ -482,3 +482,4 @@ async def get_espresso():
     if os.path.exists(file_path):
         return FileResponse(file_path, media_type="audio/mpeg")
     return Response(status_code=404, content="Espresso audio not found")
+
