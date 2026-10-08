@@ -1,7 +1,7 @@
 import * as SecureStore from 'expo-secure-store';
 import { User, AuthResponse } from './types';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://127.0.0.1:8000/api/v1';
+const API_URL = 'https://nadabrahma191012.onrender.com/api/v1';
 
 export class ApiError extends Error {
   constructor(public code: string, message: string, public status: number) {
